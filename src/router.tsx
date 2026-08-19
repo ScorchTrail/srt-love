@@ -7,6 +7,8 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+    // GitHub Pages serves the app from /<repo>/; Vite injects that as BASE_URL.
+    basepath: import.meta.env.BASE_URL,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,

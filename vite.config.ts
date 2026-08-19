@@ -6,10 +6,22 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// GitHub Pages serves a project site from /<repo>/, so assets need that prefix.
+// BASE_PATH is set by .github/workflows/deploy.yml; local dev/build stays at "/".
+const base = process.env["BASE_PATH"] ?? "/";
+
 export default defineConfig({
+  // GitHub Pages is static hosting only — no Node server, so skip the nitro server bundle.
+  nitro: false,
+  vite: {
+    base,
+    build: { outDir: "dist" },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
+    // Emit a prerendered static shell instead of requiring an SSR runtime.
+    spa: { enabled: true },
+    prerender: { enabled: true },
   },
 });
