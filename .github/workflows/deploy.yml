@@ -22,7 +22,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # Must be 24: package-lock.json was written by npm 11, and npm 10 (Node 22)
+          # resolves unstorage's optional peer dep `lru-cache` differently, breaking `npm ci`.
+          node-version: 24
           cache: npm
 
       - run: npm ci
