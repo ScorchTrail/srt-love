@@ -1,6 +1,6 @@
-# A Question for My Vero
+# A Little Present
 
-A pink little scrapbook with one bomb, one prophecy, and one very important date question.
+A small surprise, wrapped up. Don't spoil it.
 
 ## Development
 

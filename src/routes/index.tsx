@@ -18,16 +18,15 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "A Question for My Vero" },
+      { title: "A Little Present 🎁" },
       {
         name: "description",
-        content:
-          "A pink little scrapbook with one bomb, one prophecy, and one very important date question.",
+        content: "Something small, wrapped up, and meant just for you. Open it and find out.",
       },
-      { property: "og:title", content: "A Question for My Vero" },
+      { property: "og:title", content: "A Little Present 🎁" },
       {
         property: "og:description",
-        content: "There's a prophecy, a bomb, and a date to pick. No pressure.",
+        content: "It's a surprise. That's the whole point.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
