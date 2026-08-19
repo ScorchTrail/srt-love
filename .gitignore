@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Editor/agent scratch notes — keep out of the public repo
+.lovable/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
