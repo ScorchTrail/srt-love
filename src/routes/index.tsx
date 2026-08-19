@@ -302,8 +302,6 @@ function Index() {
                       {date ? format(date, "EEEE, MMMM d") : "A night soon"} — 6:30 PM
                     </p>
                     <ul className="mt-3 space-y-1 text-sm text-foreground/80">
-                      <li>· No movie. We're just playing the game.</li>
-                      <li>· Snacks on both sides of the screen</li>
                       <li>· Me talking way too much. And nobody dies.</li>
                       <li>· You, explaining nothing. Me, panicking politely.</li>
                     </ul>
